@@ -21,16 +21,19 @@ writer = csv.writer(file)
 # write header rows
 writer.writerow(["Title", "Date", "Location"])
 
+href_url = []
+time = []
+job_location = []
 for cl_job in cl_jobs:
     
-    for i in soup.findAll("h3"):
-        print(i.text.strip())
+    #for i in soup.findAll('li'):
+    #    print(i.text.strip())
 
-    href_url = soup.find(class_="result-title").text.strip()
+    href_url.append = soup.findAll(class_="result-title")[0].text.strip()
 
-    time = soup.find(class_="result-date").text.strip() # 12:23
+    time.append = soup.find(class_="result-date")[0].text.strip() # 12:23
 
-    job_location = soup.find(class_="result-hood").text.strip() # location (city)
+    job_location.append = soup.find(class_="result-hood")[0].text.strip() # location (city)
 
     writer.writerow([href_url, time, job_location])
 
