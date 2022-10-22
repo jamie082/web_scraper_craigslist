@@ -15,7 +15,7 @@ file = open('cl-jobs.csv','w')
 writer = csv.writer(file)
 
 # write header rows
-writer.writerow(["column #1", "column #2", "Link"])
+writer.writerow(["Title", "Date", "Location"])
 
 for cl_job in cl_jobs:
 
@@ -24,10 +24,8 @@ for cl_job in cl_jobs:
     # third entry
     time = soup.find(class_="result-date").text.strip() # 12:23
 
-    # fourth entry
-    for link in soup.find_all('a'):
-        link = soup.find().text.strip()
+    job_location = soup.find(class_="result-hood").text.strip() # location (city)
 
-    writer.writerow([href_url, time, link])
+    writer.writerow([href_url, time])
 
 file.close()
