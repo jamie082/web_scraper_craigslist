@@ -15,7 +15,7 @@ file = open('cl-jobs.csv','w')
 writer = csv.writer(file)
 
 # write header rows
-writer.writerow(["Title", "Date"])
+writer.writerow(["Title", "Date", "Job Location"])
 
 href_url = []
 time = []
