@@ -26,6 +26,6 @@ for cl_job in cl_jobs:
 
     job_location = soup.find(class_="result-hood").text.strip() # location (city)
 
-    writer.writerow([href_url, time])
+    writer.writerow([href_url, time, job_location])
 
 file.close()
