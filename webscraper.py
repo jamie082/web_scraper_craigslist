@@ -19,7 +19,7 @@ writer.writerow(["column #1", "column #2", "column #3"])
 
 for cl_job in cl_jobs:
 
-    href_url = soup.find('a', href=True)
+    href_url = soup.find(class_="result-title")
 
     # third entry
     time = soup.find(class_="result-date") # 12:23
