@@ -25,7 +25,8 @@ for cl_job in cl_jobs:
     time = soup.find(class_="result-date").text.strip() # 12:23
 
     # fourth entry
-    link = soup.find(class_="result-heading").text.strip()
+    for link in soup.find_all('a'):
+        link = soup.find().text.strip()
 
     writer.writerow([href_url, time, link])
 
