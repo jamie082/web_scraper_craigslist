@@ -24,9 +24,9 @@ for cl_job in cl_jobs:
 
     href_url = cl_job.find(class_="result-title").text.strip()
 
-    time = soup.find(class_="result-date").text.strip() #12:23
+    time = cl_job.find(class_="result-date").text.strip() #12:23
 
-    job_location = soup.find(class_="result-hood").text.strip() #location (city)
+    job_location = cl_job.find(class_="result-hood").text.strip() #location (city)
     
     writer.writerow([href_url, time, job_location])
 
