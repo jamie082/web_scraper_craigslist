@@ -5,4 +5,4 @@ Use string append and strip feature, Python 3, write to csv and BeautifulSoup 3 
 
 
 Python, write CSV File<p>
-# web_scrpaer_craigslist
+# web_scraper_craigslist
